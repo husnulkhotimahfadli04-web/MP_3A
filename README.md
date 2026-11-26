@@ -1,7 +1,7 @@
 # MINI PROJECT KELOMPOK 3A
 ## ANALISIS DATA EKSPOR DAN IMPOR BERDASARKAN PELABUHAN
 
-### 1. Tentang Program
+### 1. Deskripsi Program
 Pernahkah kamu ingin mengetahui pelabuhan mana yang memiliki volume ekspor dan impor terbesar? Atau bagaimana perkembangan aktivitas ekspor dan impor dari tahun ke tahun?
 
 Program ini dibuat untuk membantu menjawab pertanyaan tersebut.
