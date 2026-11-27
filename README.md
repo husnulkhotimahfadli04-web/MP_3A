@@ -1,6 +1,6 @@
 # Analisis Variabilitas Volume Ekspor dan Impor pada Empat Pelabuhan Utama Indonesia
 
-Program Python untuk menganalisis perkembangan volume ekspor dan impor pada Pelabuhan Belawan, Tanjung Priok, Tanjung Perak, dan Makassar selama periode pengamatan 2015–2025. Analisis dilakukan menggunakan statistik deskriptif dan metode tren linear (*linear trend*) untuk melihat pola perubahan serta memperkirakan volume perdagangan hingga tahun 2030.
+Program Python untuk menganalisis perkembangan volume ekspor dan impor pada Pelabuhan Belawan, Tanjung Priok, Tanjung Perak, dan Makassar selama periode pengamatan 2015–2024. Analisis dilakukan menggunakan statistik deskriptif dan metode tren linear (*linear trend*) untuk melihat pola perubahan serta memperkirakan volume perdagangan hingga tahun 2030.
 
 ## Daftar Isi
 1. [Latar Belakang](#latar-belakang)
@@ -31,14 +31,16 @@ Program ini menggunakan data dari _Hub Network_ (HUBNET) Kementerian Perhubungan
 
 ## 3. Fitur Utama
 
-| Fitur | Keterangan |
+| Fitur | Deskripsi |
 |---|---|
-| Tabel Ekspor dan Impor | Menampilkan volume ekspor, impor, dan total perdagangan setiap pelabuhan berdasarkan tahun. |
-| Tabel Historis per Pelabuhan | Menampilkan perkembangan volume ekspor dan impor setiap pelabuhan dalam rentang tahun yang dipilih. |
-| Ringkasan Statistik | Menghitung rata-rata, standar deviasi, koefisien variasi, dan pertumbuhan tahunan. |
-| Tabel Tren Linear | Menampilkan perbandingan nilai aktual dengan hasil perhitungan tren linear. |
-| Perbandingan Tren Linear | Menampilkan estimasi volume ekspor dan impor hingga tahun 2030. |
-| Input Rentang Tahun | Memungkinkan pengguna menentukan atau mengganti periode pengamatan. |
+| Login | Memverifikasi username dan password sebelum pengguna mengakses program. |
+| Pemilihan Tahun | Memungkinkan pengguna menentukan satu tahun atau rentang tahun analisis. |
+| Tabel Ekspor dan Impor | Menampilkan volume ekspor, impor, dan total pada setiap pelabuhan beserta jumlah keseluruhannya. |
+| Tabel Historis per Pelabuhan | Menampilkan perkembangan volume ekspor dan impor masing-masing pelabuhan berdasarkan tahun. |
+| Tabel Tren Linear | Membandingkan volume aktual dengan nilai hasil perhitungan tren linear. |
+| Perbandingan Tren Linear | Menampilkan estimasi volume ekspor dan impor hingga tahun 2030 beserta selisih keduanya. |
+| Ringkasan Perhitungan | Menampilkan rata-rata, standar deviasi, koefisien variasi, pertumbuhan tahunan, dan persamaan tren linear. |
+| Ganti Rentang Tahun | Memungkinkan pengguna mengubah periode analisis tanpa menjalankan ulang program. |
 
 ## 4. Metodologi
 
@@ -142,46 +144,66 @@ repository-MP-3A/
 | Format Dataset | CSV |
 | Pemisah Kolom | Titik koma (`;`) |
 | Encoding | UTF-8 / UTF-8-SIG |
-| Sistem Operasi | Windows, Linux, atau macOS yang mendukung Python 3 |
 | Koneksi Internet | Tidak diperlukan saat program dijalankan |
 
 ## 7. Cara Menjalankan Program
 
-1. Pastikan Python 3 telah terpasang.
-2. Unduh atau salin seluruh file repositori ke komputer.
-3. Letakkan file `MP_3A.py` dan dataset CSV pada lokasi yang sesuai.
-4. Sesuaikan variabel `nama_file` pada kode dengan lokasi file CSV di komputer.
+1. Pastikan Python 3 telah terinstal pada perangkat.
+2. Unduh atau salin seluruh file proyek ke dalam satu folder.
+3. Pastikan file CSV tersedia pada lokasi yang ditentukan dalam program.
+4. Buka file `MP_3A.py` menggunakan editor kode atau terminal.
+5. Sesuaikan lokasi dataset pada variabel `nama_file` di bagian awal kode.
 
-Contoh:
+Contoh penyesuaian lokasi file:
 
 ```python
-nama_file = r"C:\Users\Nama\Documents\prokom_kel3A.csv"
+nama_file = r"C:\Users\NamaPengguna\Documents\Mini Project 3A\prokom_kel3A .csv"
 ```
 
-5. Buka terminal atau Command Prompt pada direktori program.
-6. Jalankan perintah berikut:
+6. Jalankan program menggunakan perintah:
 
 ```bash
 python MP_3A.py
 ```
 
-7. Masukkan rentang tahun ketika diminta oleh program.
+7. Masukkan username dan password untuk mengakses program.
 
+**Akun bawaan:**
+
+| Keterangan | Nilai |
+|---|---|
+| Username | `kelompok3A` |
+| Password | `1234` |
+
+8. Masukkan rentang tahun ketika diminta oleh program setelah login berhasil
+   
 ## 8. Panduan Penggunaan
 
-Setelah program dijalankan, pengguna diminta memasukkan tahun atau rentang tahun pengamatan. Program kemudian menampilkan menu berikut:
+Setelah berhasil login, program akan membaca dataset dan menampilkan seluruh kategori pelabuhan yang tersedia. Selanjutnya, pengguna diminta memasukkan tahun atau rentang tahun analisis.
+
+Contoh input:
+- `2020` untuk menganalisis satu tahun.
+- `2015-2024` untuk menganalisis seluruh periode data.
+
+Setelah rentang tahun berhasil dipilih, program menampilkan menu berikut:
 
 | Pilihan | Menu | Fungsi |
 |---|---|---|
-| 1 | Tabel Ekspor dan Impor | Menampilkan volume ekspor, impor, dan total setiap tahun. |
-| 2 | Tabel Historis per Pelabuhan | Menampilkan data historis masing-masing pelabuhan. |
-| 3 | Tabel Tren Linear | Menampilkan nilai aktual dan nilai tren linear. |
-| 4 | Perbandingan Tren Linear | Menampilkan estimasi volume hingga tahun 2030. |
-| 5 | Ganti Rentang Tahun | Mengubah periode pengamatan. |
-| 0 | Keluar | Menghentikan program. |
+| 1 | Tabel Ekspor dan Impor | Menampilkan volume ekspor, impor, dan total setiap pelabuhan serta jumlah keseluruhan. |
+| 2 | Tabel Historis per Pelabuhan | Menampilkan data historis ekspor dan impor setiap pelabuhan beserta ringkasan perhitungannya. |
+| 3 | Tabel Tren Linear | Menampilkan perbandingan volume aktual dengan nilai tren linear pada periode yang dipilih. |
+| 4 | Perbandingan Tren Linear | Menampilkan estimasi volume ekspor dan impor untuk tahun setelah periode pengamatan hingga 2030. |
+| 5 | Ganti Rentang Tahun | Mengubah periode analisis. |
+| 0 | Keluar | Mengakhiri program. |
 
-Pengguna dapat memilih menu sesuai kebutuhan. Menu akan terus ditampilkan hingga pengguna memilih angka `0`.
-
+**Alur penggunaan:**
+1. Login menggunakan akun yang tersedia.
+2. Masukkan tahun atau rentang tahun analisis.
+3. Pilih menu berdasarkan kebutuhan analisis.
+4. Amati hasil perhitungan yang ditampilkan.
+5. Pilih menu 5 jika ingin mengganti rentang tahun.
+6. Pilih menu 0 untuk mengakhiri program.
+   
 ## 9. Format Data
 
 Dataset disimpan dalam format CSV dengan pemisah titik koma (`;`). Kolom yang digunakan oleh program adalah:
@@ -201,16 +223,16 @@ Cakupan analisis dalam laporan meliputi:
 - Pelabuhan Tanjung Priok.
 - Pelabuhan Tanjung Perak.
 - Pelabuhan Makassar.
-- Periode pengamatan 2015–2025.
+- Periode pengamatan 2015–2024.
 - Satuan volume: ton.
 
-Sumber data: Kementerian Perhubungan Republik Indonesia melalui HUBNET.
+Sumber data: Kementerian Perhubungan Republik Indonesia melalui _Hub Network_ (HUBNET).
 
 ## 10. Keterbatasan
 
 - Hasil analisis bergantung pada kelengkapan dan ketepatan dataset yang digunakan.
 - Penentuan nilai ekspor dan impor pada kode saat ini bergantung pada urutan data dalam CSV, bukan identifikasi berdasarkan kolom jenis arus barang secara eksplisit.
-- Data yang digunakan merupakan data agregat tahunan sehingga tidak memberikan rincian berdasarkan komoditas, perusahaan, terminal, biaya, maupun waktu tunggu.
+- Data yang digunakan merupakan data akumulasi tahunan sehingga tidak memberikan rincian berdasarkan komoditas, perusahaan, terminal, biaya, maupun waktu tunggu.
 - Tren linear hanya menggambarkan kecenderungan berdasarkan data historis dan tidak menjamin kondisi perdagangan pada periode berikutnya.
 - Estimasi hingga tahun 2030 merupakan hasil ekstrapolasi model, bukan kepastian volume perdagangan aktual.
 - Perhitungan tren linear memerlukan minimal dua tahun pengamatan.
