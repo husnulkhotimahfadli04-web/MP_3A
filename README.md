@@ -48,73 +48,67 @@ Pengolahan data dilakukan secara terpisah untuk volume ekspor dan impor. Perhitu
 
 ### 1. Rata-rata (*Mean*)
 
-\[
-\bar{X}=\frac{\sum_{t=1}^{n}X_t}{n}
-\]
+```text
+X_bar = (Σ X_t) / n
+```
 
 Keterangan:
-- \(\bar{X}\) = rata-rata volume ekspor atau impor.
-- \(X_t\) = volume pada periode ke-\(t\).
-- \(n\) = jumlah periode pengamatan.
-- \(\sum\) = penjumlahan seluruh nilai data.
+- X_bar = rata-rata volume ekspor atau impor.
+- X_t = volume pada periode ke-t.
+- n = jumlah periode pengamatan.
 
 ### 2. Pertumbuhan (*Growth*)
 
-\[
-G_t=\frac{X_t-X_{t-1}}{X_{t-1}}\times100\%
-\]
+```text
+G_t = [(X_t - X_(t-1)) / X_(t-1)] × 100%
+```
 
 Keterangan:
-- \(G_t\) = persentase pertumbuhan volume.
-- \(X_t\) = volume pada tahun berjalan.
-- \(X_{t-1}\) = volume pada tahun sebelumnya.
+- G_t = persentase pertumbuhan volume.
+- X_t = volume pada tahun berjalan.
+- X_(t-1) = volume pada tahun sebelumnya.
 
 ### 3. Standar Deviasi (*Standard Deviation*)
 
-\[
-SD=\sqrt{\frac{\sum_{t=1}^{n}(X_t-\bar{X})^2}{n}}
-\]
+```text
+SD = √[Σ(X_t - X_bar)² / n]
+```
 
 Keterangan:
-- \(SD\) = standar deviasi atau tingkat penyebaran data.
-- \(X_t\) = volume pada periode ke-\(t\).
-- \(\bar{X}\) = rata-rata volume.
-- \(n\) = jumlah periode pengamatan.
+- SD = standar deviasi atau tingkat penyebaran data.
+- X_t = volume pada periode ke-t.
+- X_bar = rata-rata volume.
+- n = jumlah periode pengamatan.
 
 ### 4. Koefisien Variasi (KV)
 
-\[
-KV=\frac{SD}{\bar{X}}\times100\%
-\]
+```text
+KV = (SD / X_bar) × 100%
+```
 
 Keterangan:
-- \(KV\) = koefisien variasi dalam persentase.
-- \(SD\) = standar deviasi.
-- \(\bar{X}\) = rata-rata volume.
+- KV = koefisien variasi dalam persentase.
+- SD = standar deviasi.
+- X_bar = rata-rata volume.
 
 ### 5. Tren Linear (*Linear Trend*)
 
-\[
-\hat{Y}=a+bX
-\]
+```text
+Y_hat = a + bX
 
-Perhitungan koefisien:
+b = Σ[(X_i - X_bar)(Y_i - Y_bar)] / Σ(X_i - X_bar)²
 
-\[
-b=\frac{\sum(X_i-\bar{X})(Y_i-\bar{Y})}{\sum(X_i-\bar{X})^2}
-\]
-
-\[
-a=\bar{Y}-b\bar{X}
-\]
+a = Y_bar - bX_bar
+```
 
 Keterangan:
-- \(\hat{Y}\) = nilai volume berdasarkan tren.
-- \(a\) = konstanta atau titik potong garis tren.
-- \(b\) = koefisien kemiringan garis tren.
-- \(X_i\) = indeks urutan periode pengamatan.
-- \(Y_i\) = volume aktual pada periode ke-\(i\).
-- \(\bar{X}\) dan \(\bar{Y}\) = rata-rata indeks periode dan volume aktual.
+- Y_hat = nilai volume berdasarkan tren.
+- a = konstanta garis tren.
+- b = koefisien kemiringan garis tren.
+- X_i = indeks urutan periode pengamatan.
+- Y_i = volume aktual pada periode ke-i.
+- X_bar = rata-rata indeks periode.
+- Y_bar = rata-rata volume aktual.
   
 Hasil persamaan tren digunakan untuk menghitung nilai kecenderungan pada periode pengamatan dan memperkirakan volume hingga tahun 2030. Nilai estimasi negatif dibatasi menjadi nol dalam program.
 
