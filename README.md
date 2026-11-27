@@ -1,6 +1,6 @@
 # Analisis Variabilitas Volume Ekspor dan Impor pada Empat Pelabuhan Utama Indonesia
 
-Program Python untuk menganalisis perkembangan volume ekspor dan impor pada Pelabuhan Belawan, Tanjung Priok, Tanjung Perak, dan Makassar selama periode pengamatan 2015–2024. Analisis dilakukan menggunakan statistik deskriptif dan metode tren linear (*linear trend*) untuk melihat pola perubahan serta memperkirakan volume perdagangan hingga tahun 2030.
+Program Python untuk menganalisis perkembangan volume ekspor dan impor pada Pelabuhan Belawan, Tanjung Priok, Tanjung Perak, dan Makassar selama periode pengamatan 2015–2025. Analisis dilakukan menggunakan statistik deskriptif dan metode tren linear (*linear trend*) untuk melihat pola perubahan serta memperkirakan volume perdagangan hingga tahun 2030.
 
 ## Daftar Isi
 1. [Latar Belakang](#latar-belakang)
@@ -207,7 +207,7 @@ Cakupan analisis dalam laporan meliputi:
 - Pelabuhan Tanjung Priok.
 - Pelabuhan Tanjung Perak.
 - Pelabuhan Makassar.
-- Periode pengamatan 2015–2024.
+- Periode pengamatan 2015–2025.
 - Satuan volume: ton.
 
 Sumber data: Kementerian Perhubungan Republik Indonesia melalui HUBNET.
